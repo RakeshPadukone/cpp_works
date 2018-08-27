@@ -1,32 +1,37 @@
 #include<iostream>
 using namespace std;
-int main()
-{
-    int n1,n2,n3;
-    cout<<"Enter three no";
-    cin>>n1>>n2>>n3;
+ int largest(int n1,int n2,int n3)
+ {
     if(n1>=n2)
     {
         if(n1>=n3)
         {
-            cout<<n1<<"is greater"<<endl;
+            return n1;
         }
         else
         {
-            cout<< n3<<"is greater"<<endl;
+            return n3;
         }
     }
     else
     {
         if(n2>=n3)
         {
-            cout<<n2<<"is greater";
+           return n2;
 
         }
         else
         {
-            cout<<n3<<"is graeter";
+            return n3;
         }
     }
+ }
+int main()
+{
+    int n1,n2,n3;
+    cout<<"Enter three no";
+    cin>>n1>>n2>>n3;
+
+    cout<<"largest number is"<<largest(n1,n2,n3);
     return 0;
 }
